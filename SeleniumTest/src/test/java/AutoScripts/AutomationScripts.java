@@ -478,18 +478,92 @@ public static void TestAllTabsPage_10() throws Exception
 	driver.findElement(By.xpath(ReusableMethods.getProperty("xpath_files"))).click();
 	validateTitle(driver,ReusableMethods.getProperty("exp_files_txt"), "Files home page");
 	
+	Thread.sleep(1500);
 	driver.findElement(By.xpath(ReusableMethods.getProperty("xpath_notifications"))).click();
-	Thread.sleep(3000);
+	Thread.sleep(1500);
+	int size = driver.findElements(By.tagName("iframe")).size();
+	System.out.println(size);
+//	String parentWinHandle=driver.getWindowHandle();
+	driver.switchTo().frame("post_office_frame");
+	
+	driver.findElement(By.xpath("//div[@class='o-closeIcon']")).click();
+	
+	 System.out.println("overlay window closed");
+	 Thread.sleep(3000);
+//	 driver.switchTo().window(parentWinHandle);
+	 driver.switchTo().defaultContent();
 	 
 	driver.findElement(By.xpath(ReusableMethods.getProperty("xpath_search"))).click();
+//	String parentHandle=driver.getWindowHandle();
+	driver.switchTo().frame("GlobalSearchApp");
 	driver.findElement(By.xpath("//input[@id='placeholder']")).isDisplayed();
 	System.out.println("search box is diplayed");
 	
+	Thread.sleep(2000);
+	driver.switchTo().defaultContent();
+	
 	driver.findElement(By.xpath(ReusableMethods.getProperty("xpath_help"))).click();
-driver.findElement(By.xpath("//input[@id='menu_help']")).isDisplayed();
-System.out.println("help option is displayed");
+    driver.findElement(By.xpath("//input[@id='menu_help']")).isDisplayed();
+    System.out.println("help option is displayed");
+    
+    boolean a= driver.findElement(By.xpath("//li/a[contains(text(),'Help Center')]")).isDisplayed();
+    if(a) {
+    	System.out.println("Help Center link is displayed");
+    }
+    else {
+    	System.out.println("Help Center link is NOT displayed");
+    }
+    
+    
+    boolean b=driver.findElement(By.xpath("//li/a[contains(text(),'Get help for this page')]")).isDisplayed();
+    if(b) {
+    	System.out.println("Get help for this page link is displayed");
+    }
+    else {
+    	System.out.println("Get help for this page link is NOT displayed");
+    }
 
+    Thread.sleep(2000);
+    driver.close();
 }
+
+public static void TestLogout_11() throws Exception
+{
+	driver=Modules.Login_toXero(driver);
+	Thread.sleep(5000);
+	WebElement temp1=driver.findElement(By.xpath("//div[@class='xn-h-demo-bar']/p"));
+	String temp=temp1.getText();
+	System.out.println("Home text is:"+temp);
+	WebElement trialmsg=driver.findElement(By.xpath(ReusableMethods.getProperty("xpath_trial_msg")));
+	validateTextContent(trialmsg, ReusableMethods.getProperty("exptrial_msg"), "Trial Message");
+	driver.findElement(By.xpath(ReusableMethods.getProperty("xpath_dashboard"))).click();
+	Thread.sleep(5000);
+	validateTitle(driver,ReusableMethods.getProperty("exp_dash_txt"), "Dashboard title page");
+	
+	driver.findElement(By.xpath(ReusableMethods.getProperty("xpath_lnk_home_username"))).click();
+	Thread.sleep(1000);
+	driver.findElement(By.xpath(ReusableMethods.getProperty("xpath_lnk_logout"))).click();
+	Thread.sleep(4000);
+	
+    String actual=driver.getTitle();
+
+    String expected=ReusableMethods.getProperty("title_loginpage");
+
+     if(expected.equals(actual))
+     {
+    	 System.out.println("Login page title is verified");
+    	 InitialDriverFile.status=true;
+     }
+     else {
+    	 System.out.println("Login page Title not verified");
+    	 InitialDriverFile.status=false;
+     }
+    driver.close();
+}
+
+
+
+
 
 }
 

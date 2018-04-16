@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="31907" started-at="2018-04-15T23:12:21Z" finished-at="2018-04-15T23:12:53Z">
+  <suite name="Default suite" duration-ms="6996" started-at="2018-04-16T02:44:16Z" finished-at="2018-04-16T02:44:23Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="31907" started-at="2018-04-15T23:12:21Z" finished-at="2018-04-15T23:12:53Z">
+    <test name="Default test" duration-ms="6996" started-at="2018-04-16T02:44:16Z" finished-at="2018-04-16T02:44:23Z">
       <class name="AutoScripts.InitialDriverFile">
-        <test-method status="FAIL" signature="initDriver()[pri:0, instance:AutoScripts.InitialDriverFile@7c16905e]" name="initDriver" duration-ms="31890" started-at="2018-04-15T16:12:21Z" finished-at="2018-04-15T16:12:53Z">
+        <test-method status="FAIL" signature="initDriver()[pri:0, instance:AutoScripts.InitialDriverFile@7c16905e]" name="initDriver" duration-ms="6983" started-at="2018-04-15T19:44:16Z" finished-at="2018-04-15T19:44:23Z">
           <exception class="java.lang.reflect.InvocationTargetException">
             <full-stacktrace>
               <![CDATA[java.lang.reflect.InvocationTargetException
@@ -40,12 +40,12 @@
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoAlertPresentException: No modal dialog is currently open
+Caused by: org.openqa.selenium.WebDriverException: Failed to decode response from marionette
 Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
 System info: host: 'DESKTOP-SH0GKV5', ip: '10.0.1.12', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_162'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 54.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:processID: 22828, moz:profile: C:\Users\harsh\AppData\Loca..., pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, specificationLevel: 0, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: 650a6922-e6a7-489e-a9e4-2ab72c360d3e
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 54.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:processID: 31484, moz:profile: C:\Users\harsh\AppData\Loca..., pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, specificationLevel: 0, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: da448875-715e-438e-80e2-35dfbf29414e
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -56,9 +56,9 @@ Session ID: 650a6922-e6a7-489e-a9e4-2ab72c360d3e
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:931)
-	at AutoScripts.AutomationScripts.TestAllTabsPage_10(AutomationScripts.java:483)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:273)
+	at utility.Modules.Login_toXero(Modules.java:67)
+	at AutoScripts.AutomationScripts.TestAllTabsPage_10(AutomationScripts.java:447)
 	... 29 more
 ]]>
             </full-stacktrace>

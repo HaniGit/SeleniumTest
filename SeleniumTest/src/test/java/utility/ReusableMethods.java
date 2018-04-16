@@ -214,8 +214,8 @@ public static HSSFRow Row;
 	    
 	    htmlReporter.config().setDocumentTitle("report status");
 	    htmlReporter.config().setReportName("customized report");
-	    /*htmlReporter.config().setTestViewChartLocation(ChartLocation.TOP);
-	    htmlReporter.config().setTheme(Theme.STANDARD);*/
+	    htmlReporter.config().setTestViewChartLocation(ChartLocation.TOP);
+	    htmlReporter.config().setTheme(Theme.STANDARD);
 	    return extent;
 	  }
 	  

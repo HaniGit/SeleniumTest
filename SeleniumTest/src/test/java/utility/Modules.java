@@ -66,12 +66,9 @@ public static WebDriver driver;
           	driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 		    driver.get(InitialDriverFile.url);
 		    String actual=driver.getTitle();
-	//		    System.out.println("Actual login page title is:"+actual);
-	//			 String expected="Login | Xero Accounting Software";
+
 		    String expected=ReusableMethods.getProperty("title_loginpage");
-	//		    System.out.println(actual);
-	         
-	//              Assert.assertEquals(actual, expected); 
+ 
              if(expected.equals(actual))
              {
             	 System.out.println("Login page title is verified");

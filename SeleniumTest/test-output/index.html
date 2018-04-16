@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\harsh\AppData\Local\Temp\testng-eclipse--820018675\testng-customsuite.xml</span>
+                    <span>C:\Users\harsh\AppData\Local\Temp\testng-eclipse--1011186769\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -158,12 +158,12 @@
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoAlertPresentException: No modal dialog is currently open
+Caused by: org.openqa.selenium.WebDriverException: Failed to decode response from marionette
 Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
 System info: host: &apos;DESKTOP-SH0GKV5&apos;, ip: &apos;10.0.1.12&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_162&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 54.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:processID: 22828, moz:profile: C:\Users\harsh\AppData\Loca..., pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, specificationLevel: 0, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: 650a6922-e6a7-489e-a9e4-2ab72c360d3e
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 54.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:processID: 31484, moz:profile: C:\Users\harsh\AppData\Loca..., pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, specificationLevel: 0, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: da448875-715e-438e-80e2-35dfbf29414e
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -174,9 +174,9 @@ Session ID: 650a6922-e6a7-489e-a9e4-2ab72c360d3e
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:931)
-	at AutoScripts.AutomationScripts.TestAllTabsPage_10(AutomationScripts.java:483)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:273)
+	at utility.Modules.Login_toXero(Modules.java:67)
+	at AutoScripts.AutomationScripts.TestAllTabsPage_10(AutomationScripts.java:447)
 	... 29 more
 
 </div> <!-- stack-trace -->
@@ -187,7 +187,7 @@ Session ID: 650a6922-e6a7-489e-a9e4-2ab72c360d3e
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\harsh\AppData\Local\Temp\testng-eclipse--820018675\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\harsh\AppData\Local\Temp\testng-eclipse--1011186769\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -252,12 +252,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'initDriver')
 data.setCell(0, 2, 'AutoScripts.InitialDriverFile')
-data.setCell(0, 3, 31890);
+data.setCell(0, 3, 6983);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 31 seconds</span>
+              <span class="suite-total-time">Total running time: 6 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
